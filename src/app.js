@@ -37,8 +37,6 @@ function startGame() {
 startGame();
 
 function determineResult(suit) {
-  log(`current card: ${computerCardSlot.innerText}`);
-
   if (computerCardSlot.innerText === '') {
     return;
   }
@@ -48,7 +46,7 @@ function determineResult(suit) {
     text.innerText = `You won! \nScore: ${score}`;
   } else {
     score -= 1;
-    text.innerText = `You lost :( \nScore: ${score}`;
+    text.innerText = `You lost. \nScore: ${score}`;
   }
   if (computerDeck.cards[0]) {
     log(`next card: ${computerDeck.cards[0].suit}`);
